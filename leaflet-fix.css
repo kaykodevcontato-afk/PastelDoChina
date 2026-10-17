@@ -32,3 +32,10 @@
 #map .leaflet-popup-tip{width:17px;height:17px;background:white;transform:translateY(-10px) rotate(45deg);margin:11px auto;box-shadow:0 3px 14px #0005}
 #map .leaflet-popup-close-button{position:absolute;right:0;top:0;width:24px;height:24px;text-align:center;text-decoration:none;color:#555;font-size:20px;z-index:1}
 @media(max-width:600px){#map{height:360px!important}}
+
+/* V4: manter os azulejos e o marcador em uma camada corretamente posicionada. */
+#map .leaflet-map-pane{position:absolute;left:0;top:0;}
+#map .leaflet-tile-pane{position:absolute;left:0;top:0;}
+#map .leaflet-overlay-pane{position:absolute;left:0;top:0;}
+#map .leaflet-tile{width:256px;height:256px;object-fit:fill;}
+#map .leaflet-control-container{position:relative;z-index:900;}

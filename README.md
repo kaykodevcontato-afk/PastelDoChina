@@ -1,3 +1,15 @@
+# LoveSpace V4 — GitHub Pages
+
+O `config.js` já contém a **publishable key** fornecida pelo proprietário e a URL do projeto Supabase. Essa chave é pública, mas jamais use `service_role` ou `secret` no navegador.
+
+**Atualização sobre banco:** as seis tabelas já foram criadas no Supabase. **Não execute `schema.sql` novamente** em seu banco atual. O arquivo está presente para instalações novas.
+
+**Como instalar:** extraia o ZIP, envie todos os arquivos da pasta para a raiz do repositório GitHub (sem a pasta pai), verifique Settings > Pages > Deploy from a branch > main > /(root), e abra o link após o deploy. Em Supabase > Authentication > URL Configuration adicione a URL final do Pages em Site URL/Redirect URLs.
+
+**Se carregar uma versão antiga:** remova o PWA instalado, ou em F12 > Application > Service Workers use Unregister e em Storage use Clear site data. Reabra após atualizar.
+
+**Mapa:** tiles fornecidos pelo OpenStreetMap, Leaflet CSS via CDN com correções locais; requer internet e geolocalização permitida. Só compartilha quando a pessoa aperta o botão; a última posição continua visível até excluí-la.
+
 # 💖 LoveSpace — Nosso Universo (V1)
 
 Site **mobile-first / PWA** para **2 pessoas por universo**. HTML/CSS/JavaScript sem compilação, com autenticação, mensagens e sincronização via Supabase, álbuns privados, pet virtual, localização manual e oito perguntas para casais. É um MVP funcional **depois de configurar um Supabase** — não há simulação de chat ou banco.
