@@ -6,3 +6,8 @@
 #map .leaflet-container img,#map img.leaflet-tile,#map img.leaflet-marker-icon,#map img.leaflet-marker-shadow{max-width:none!important;max-height:none!important}
 #map .leaflet-control-zoom a{color:#302040!important}
 @media(max-width:600px){#map{height:360px}}
+
+/* V5: navegação individual e alertas de conversa */
+.chatsettings{display:flex;gap:9px;flex-wrap:wrap;margin:4px 0 12px}.chatsettings button{font-size:13px}
+.unread{display:inline-block;background:#f54d8a;color:white;font-size:11px;min-width:20px;padding:3px 6px;border-radius:12px;margin-left:3px;text-align:center}
+.mapcontrols button:disabled{opacity:.45;cursor:not-allowed}

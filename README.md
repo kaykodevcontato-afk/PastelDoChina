@@ -63,3 +63,10 @@ Esta versão usa os arquivos Leaflet CSS e JS via jsDelivr, inclui regras CSS pa
 
 ## Correção V3 do mapa
 Foi incluído `leaflet-fix.css` local, para manter o posicionamento dos mosaicos mesmo se o CSS externo não carregar. O marcador agora usa `circleMarker` (não depende de imagens PNG). O cache do PWA foi atualizado para v3. Faça upload de TODOS os arquivos na raiz do repositório, aguarde o GitHub Actions e abra a página em uma janela anônima para conferir. No dispositivo com PWA antigo, remova o app instalado e reinstale após a atualização. Se persistir, use F12 → Network para checar `leaflet.js`, `leaflet-fix.css` e os tiles de OpenStreetMap.
+
+
+## Novidades V5: localização e mensagens
+- No Mapa do Amor há os botões **Ver minha posição** e **Ver posição do meu par**. Eles centralizam o mapa na **última posição compartilhada**; não há rastreamento contínuo. Cada pessoa deve tocar em **Compartilhar minha posição agora**, consentir e autorizar a geolocalização. É possível apagar a própria posição a qualquer momento.
+- No Chat há **Ativar som** e **Permitir notificações**. Os avisos dependem de eventos Realtime (habilite a publicação de `messages` no Supabase se necessário). O som precisa ser ativado por interação; as notificações do sistema precisam de permissão do navegador e são disparadas somente quando o site está aberto. **Não há Push com app fechado** nesta versão (isso exige Web Push, assinaturas e backend/Edge Function).
+- Não execute novamente `schema.sql` se seu banco já está configurado. Basta substituir os arquivos web.
+- No GitHub Pages, aguarde o deploy e teste em aba anônima caso o service worker anterior persista.
