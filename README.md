@@ -5,7 +5,7 @@ Site **mobile-first / PWA** para **2 pessoas por universo**. HTML/CSS/JavaScript
 ## 1. Crie o banco gratuitamente
 1. Abra https://supabase.com/dashboard e crie um projeto.
 2. No **SQL Editor**, cole o conteúdo completo de `schema.sql`, e execute **uma vez**. Este SQL cria tabelas, funções RPC, políticas RLS, bucket privado e publicação Realtime.
-3. Em **Project Settings > API / Data API**, copie a **Project URL** e a chave **publishable** (ou chave `anon` legada); edite `config.js`.
+3. Em **Project Settings > API / Data API**, copie a **Project URL** e a chave **publishable** (ou chave `anon` legada); edite `config.js`. A URL deste projeto já foi preenchida com o endereço público informado na conversa. **Você ainda precisa inserir sua chave pública.**
 4. **Nunca use a `service_role`/`secret` key no JavaScript**. A publishable/anon foi projetada para uso no navegador, desde que o banco esteja protegido pelas políticas RLS.
 5. Em **Authentication > Providers > Email**, habilite e-mail/senha. Se a confirmação de e-mail estiver ligada, confirme seu endereço de e-mail antes de entrar.
 6. Em **Authentication > URL Configuration**, defina **Site URL** como a URL final do GitHub Pages e inclua essa URL na lista de Redirect URLs. Exemplo: `https://SEU_USUARIO.github.io/SEU_REPOSITORIO/`.
@@ -44,3 +44,6 @@ Site **mobile-first / PWA** para **2 pessoas por universo**. HTML/CSS/JavaScript
 - Localização falha: use HTTPS, permita acesso ao local, e mantenha a aba aberta no momento do compartilhamento.
 
 Criado para estudo e testes — sem afiliação com Couple2.
+
+## Correção do mapa (V2)
+Esta versão usa os arquivos Leaflet CSS e JS via jsDelivr, inclui regras CSS para impedir o desalinhamento dos tiles, invalida o tamanho do mapa após a exibição da aba, e aumenta a versão do cache do PWA. Se estiver vendo a versão antiga: no navegador abra DevTools > Application > Service Workers > Unregister e limpe dados de armazenamento deste site, depois atualize.
