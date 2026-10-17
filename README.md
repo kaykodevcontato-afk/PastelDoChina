@@ -47,3 +47,7 @@ Criado para estudo e testes — sem afiliação com Couple2.
 
 ## Correção do mapa (V2)
 Esta versão usa os arquivos Leaflet CSS e JS via jsDelivr, inclui regras CSS para impedir o desalinhamento dos tiles, invalida o tamanho do mapa após a exibição da aba, e aumenta a versão do cache do PWA. Se estiver vendo a versão antiga: no navegador abra DevTools > Application > Service Workers > Unregister e limpe dados de armazenamento deste site, depois atualize.
+
+
+## Correção V3 do mapa
+Foi incluído `leaflet-fix.css` local, para manter o posicionamento dos mosaicos mesmo se o CSS externo não carregar. O marcador agora usa `circleMarker` (não depende de imagens PNG). O cache do PWA foi atualizado para v3. Faça upload de TODOS os arquivos na raiz do repositório, aguarde o GitHub Actions e abra a página em uma janela anônima para conferir. No dispositivo com PWA antigo, remova o app instalado e reinstale após a atualização. Se persistir, use F12 → Network para checar `leaflet.js`, `leaflet-fix.css` e os tiles de OpenStreetMap.

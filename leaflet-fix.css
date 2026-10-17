@@ -1,0 +1,34 @@
+/* LoveSpace V3: estilos essenciais do Leaflet, independentes do CDN CSS. */
+#map {display:block!important;position:relative!important;width:100%!important;height:420px!important;min-height:350px;overflow:hidden!important;isolation:isolate;touch-action:pan-x pan-y;background:#e5e4e0;border-radius:18px}
+#map.leaflet-container {font:12px/1.5 "Helvetica Neue",Arial,sans-serif;outline:0;cursor:grab}
+#map.leaflet-container.leaflet-dragging {cursor:grabbing}
+#map .leaflet-pane,#map .leaflet-tile,#map .leaflet-marker-icon,#map .leaflet-marker-shadow,#map .leaflet-tile-container,#map .leaflet-pane>svg,#map .leaflet-pane>canvas,#map .leaflet-zoom-box,#map .leaflet-image-layer {position:absolute;left:0;top:0}
+#map .leaflet-map-pane,#map .leaflet-tile,#map .leaflet-marker-icon,#map .leaflet-marker-shadow {user-select:none;-webkit-user-select:none}
+#map .leaflet-tile {visibility:hidden;border:0!important;max-width:none!important;max-height:none!important;padding:0!important;margin:0!important}
+#map .leaflet-tile-loaded {visibility:inherit}
+#map .leaflet-tile-container {pointer-events:none}
+#map .leaflet-zoom-animated {transform-origin:0 0}
+#map .leaflet-overlay-pane svg {user-select:none}
+#map .leaflet-pane {z-index:400}
+#map .leaflet-tile-pane{z-index:200}
+#map .leaflet-overlay-pane{z-index:400}
+#map .leaflet-shadow-pane{z-index:500}
+#map .leaflet-marker-pane{z-index:600}
+#map .leaflet-tooltip-pane{z-index:650}
+#map .leaflet-popup-pane{z-index:700}
+#map .leaflet-control{position:relative;z-index:800;pointer-events:auto}
+#map .leaflet-top,#map .leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}
+#map .leaflet-top{top:0}#map .leaflet-bottom{bottom:0}#map .leaflet-left{left:0}#map .leaflet-right{right:0}
+#map .leaflet-top .leaflet-control{margin-top:10px}#map .leaflet-bottom .leaflet-control{margin-bottom:10px}#map .leaflet-left .leaflet-control{margin-left:10px}#map .leaflet-right .leaflet-control{margin-right:10px}
+#map .leaflet-control-zoom{border:2px solid #0003;border-radius:5px;overflow:hidden;box-shadow:0 1px 6px #0003}
+#map .leaflet-control-zoom a{display:block;width:30px;height:30px;line-height:30px;text-align:center;background:#fff;color:#333!important;text-decoration:none;font-size:22px;font-weight:bold;border-bottom:1px solid #ddd}
+#map .leaflet-control-attribution{background:#ffffffc9;color:#333;padding:0 5px;font-size:10px}
+#map .leaflet-control-attribution a{color:#1668aa}
+#map .leaflet-marker-icon,#map .leaflet-marker-shadow {display:block;max-width:none!important;max-height:none!important}
+#map .leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}
+#map .leaflet-popup-content-wrapper{background:#fff;border-radius:12px;box-shadow:0 3px 14px #0005;color:#333;padding:1px}
+#map .leaflet-popup-content{margin:13px 20px;min-width:70px}
+#map .leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}
+#map .leaflet-popup-tip{width:17px;height:17px;background:white;transform:translateY(-10px) rotate(45deg);margin:11px auto;box-shadow:0 3px 14px #0005}
+#map .leaflet-popup-close-button{position:absolute;right:0;top:0;width:24px;height:24px;text-align:center;text-decoration:none;color:#555;font-size:20px;z-index:1}
+@media(max-width:600px){#map{height:360px!important}}
