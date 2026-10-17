@@ -1,3 +1,36 @@
+# LoveSpace V6 💌 — Pino personalizado + Estou pensando em você
+
+**Projeto para GitHub Pages.** Inclui todas as funções da V5 (chat, pet, jogos, memórias, contador, mapa) e novas funções.
+
+## Atualização obrigatória do banco existente
+
+No Supabase, abra SQL Editor e execute **somente `MIGRAR_V6.sql`**. Não execute novamente o `schema.sql` porque ele contém a criação inicial das tabelas. Em um projeto Supabase NOVO, `schema.sql` já inclui as tabelas e as alterações V6.
+
+## Configurar Realtime
+
+No Supabase, abra Database → Publications → `supabase_realtime` e habilite `messages`, `locations` e `location_requests` (se ainda não estiverem). Caso o Realtime não esteja ativo, ao recarregar o site as novas solicitações aparecem; as notificações instantâneas dependem do Realtime.
+
+## Novas funções
+
+- Personalizar cor e emoji do pino no mapa. O estilo é guardado no navegador e enviado ao Supabase **somente ao compartilhar localização**.
+- Enviar um pedido **Estou pensando em você 💌** ao outro integrante do casal. A pessoa recebe o convite e pode aceitar ou recusar.
+- Ao aceitar, o **próprio navegador do destinatário solicita permissão de localização** e salva a posição atual. Se negar, a localização não é enviada.
+- Um balão mostra uma frase carinhosa sorteada no momento em que a localização é compartilhada.
+- A posição NÃO é atualizada automaticamente e fica visível até a pessoa apagá-la. Frases e solicitações ficam salvas no banco. O pedido em si NÃO compartilha a localização de ninguém.
+- Sons e notificações do pedido funcionam enquanto a página está aberta. Site fechado exige Web Push/backend adicional.
+
+## Implantação
+
+1. Configure `config.js` com **somente** Project URL e **publishable key** (nunca service_role).
+2. Execute `MIGRAR_V6.sql` no seu banco atual.
+3. Publique **os arquivos descompactados na raiz** do repositório GitHub Pages. Branch `main`, pasta `/(root)`.
+4. Limpe dados do site/cache do PWA antigo se necessário (F12 → Application → Service Workers → Unregister) e recarregue.
+5. Teste com as duas contas logadas em navegadores diferentes. O destinatário precisa permitir a localização no navegador para compartilhá-la.
+
+## Segurança e privacidade
+
+As solicitações e localizações são protegidas pelas políticas RLS do casal. A confirmação para compartilhar é explícita. Não se deve usar a função para pressionar outra pessoa a divulgar a posição. O mapa envia requisições aos provedores públicos de tiles.
+
 # LoveSpace V4 — GitHub Pages
 
 O `config.js` já contém a **publishable key** fornecida pelo proprietário e a URL do projeto Supabase. Essa chave é pública, mas jamais use `service_role` ou `secret` no navegador.

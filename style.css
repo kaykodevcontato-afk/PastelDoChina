@@ -11,3 +11,7 @@
 .chatsettings{display:flex;gap:9px;flex-wrap:wrap;margin:4px 0 12px}.chatsettings button{font-size:13px}
 .unread{display:inline-block;background:#f54d8a;color:white;font-size:11px;min-width:20px;padding:3px 6px;border-radius:12px;margin-left:3px;text-align:center}
 .mapcontrols button:disabled{opacity:.45;cursor:not-allowed}
+
+/* V6: carinho no mapa e pinos */
+.love-extra{margin:18px 0;padding:16px;border:1px solid #77528d;border-radius:18px;background:rgba(255,255,255,.045)}
+.love-extra h3{margin:0 0 8px}.love-extra p{line-height:1.55}.pin-settings{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.pin-settings label{display:flex;flex-direction:column;gap:9px}.pin-settings select,.pin-settings input{min-height:43px;border-radius:12px;color:#ffffff;background:#302041;border:1px solid #8961a4;padding:4px 9px}.pin-settings input[type=color]{width:100%}.request-list{display:grid;gap:10px;margin-top:15px}.love-request{border:1px solid #795890;border-radius:14px;padding:12px;background:#2b193d}.love-request .mapcontrols{margin-top:10px}.love-pin{height:46px;width:46px;display:flex;align-items:center;justify-content:center;border:3px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 6px 18px #0006}.love-pin span{font-size:22px;transform:rotate(45deg)}.love-pin-wrapper{background:transparent!important;border:none!important}.leaflet-popup-content{max-width:235px;overflow-wrap:anywhere}@media(max-width:560px){.pin-settings{grid-template-columns:1fr}}
