@@ -5,3 +5,20 @@
 .developer-credit strong{color:#e64443;font-weight:800}
 .developer-credit:hover,.developer-credit:focus-visible{opacity:1;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:640px){.developer-credit{display:block;margin:0.65rem 0 0}}
+
+/* Horários e atendimento delivery */
+.hero-hours{display:inline-block;margin:20px 0 0;padding:10px 16px;background:#fff7ec;border-left:4px solid var(--red);font-size:14px;font-weight:600;color:#3a302b;line-height:1.5}
+.hero-hours strong{color:var(--red)}
+.hours-section{background:#f0e1c9;padding:80px 0;scroll-margin-top:78px}
+.hours-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.hours-heading h2{font:900 clamp(44px,5.8vw,74px)/.96 'Barlow Condensed',sans-serif;letter-spacing:-1.5px;margin:18px 0 22px}
+.hours-heading h2 span{color:var(--red)}
+.hours-heading p{max-width:480px;line-height:1.8;color:#514840}
+.hours-card{background:var(--dark);color:#fff8e8;padding:34px;display:flex;flex-direction:column;align-items:flex-start;gap:15px;box-shadow:9px 9px 0 var(--red)}
+.hours-card-icon{font-size:30px}
+.hours-label{display:block;color:#e8cbbb;font-size:12px;letter-spacing:2.2px;font-weight:800;margin-bottom:6px}
+.hours-days{display:block;font:900 clamp(30px,3.4vw,44px)/1 'Barlow Condensed',sans-serif;color:white}
+.hours-time{display:block;font:900 40px 'Barlow Condensed',sans-serif;color:#ffb4a1;margin-top:8px}
+.delivery-label{border:1px solid #f1a9a4;color:#f8cec2;padding:8px 14px;font-size:12px;font-weight:800;letter-spacing:2px}
+.hours-card .button{box-shadow:none;margin-top:6px;width:100%}
+@media(max-width:700px){.hours-section{padding:62px 0}.hours-layout{grid-template-columns:1fr;gap:28px}.hours-card{padding:26px}.hero-hours{font-size:12px}}
